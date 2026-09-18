@@ -1,8 +1,14 @@
 import "./App.css";
 
+// JS Kod
+function calculatePower(level, hp) {
+  return level * 10 + hp;
+}
+
 // 1. KORT-MALLEN (Komponenten)
 function CharacterCard(props) {
   const hero = props.character;
+  const power = calculatePower(hero.level, hero.hp);
 
   return (
     <article className="card">
@@ -10,6 +16,7 @@ function CharacterCard(props) {
       <p>Roll: {hero.role}</p>
       <p>HP: {hero.hp}</p>
       <p>Level: {hero.level}</p>
+      <p>Attackstyrka: {power}</p>
     </article>
   );
 }
