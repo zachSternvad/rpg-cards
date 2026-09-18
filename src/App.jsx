@@ -48,10 +48,12 @@ export default function App() {
   return (
     <main>
       <h1>RPG Guild Dashboard</h1>
-      <CharacterCard character={guild[0]} />
-      <CharacterCard character={guild[1]} />
-      <CharacterCard character={guild[2]} />
-      <CharacterCard character={guild[3]} />
+      <div className="guild-grid">
+        <CharacterCard character={guild[0]} />
+        <CharacterCard character={guild[1]} />
+        <CharacterCard character={guild[2]} />
+        <CharacterCard character={guild[3]} />
+      </div>
     </main>
   );
 }
